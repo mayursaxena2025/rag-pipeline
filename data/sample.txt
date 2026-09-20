@@ -1,0 +1,5 @@
+The project is a retrieval-augmented generation (RAG) system that helps answer questions using a knowledge base. It loads source documents, splits them into small chunks, converts them into vector embeddings, stores them in a searchable index, and retrieves the most relevant chunks before generating a final answer.
+
+This implementation is designed to be fast, modular, and easy to extend. It uses a modern stack including LangChain, Hugging Face embeddings, and FAISS for efficient similarity search.
+
+The system is well-suited for internal documentation search, customer support knowledge bases, and private enterprise Q&A systems.

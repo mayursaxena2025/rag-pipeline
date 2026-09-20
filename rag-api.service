@@ -1,0 +1,15 @@
+[Unit]
+Description=RAG Pipeline API
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/rag-pipeline
+Environment="PATH=/home/ec2-user/rag-pipeline/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=/home/ec2-user/rag-pipeline/.env
+ExecStart=/home/ec2-user/rag-pipeline/.venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
